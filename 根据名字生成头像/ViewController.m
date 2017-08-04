@@ -19,12 +19,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIImageView *imageV = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
+    UIImageView *imageV = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 200, 200)];
     imageV.center = CGPointMake(self.view.center.x, self.view.center.y);
-    [self.view addSubview:imageV];
-    
+    imageV.layer.cornerRadius=100;
     UIImage *img = [self imageWithTitle:@"胜" fontSize:52 imageColor:[UIColor redColor] titleColor:[UIColor whiteColor]];
     imageV.image = img;
+    [self.view addSubview:imageV];
+    
+    
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
